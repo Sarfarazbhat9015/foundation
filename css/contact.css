@@ -1,151 +1,66 @@
-*{
-    box-sizing: border-box;
+body {
+    background-image: url(../images/contact.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+.navbar{
+    color: #000;
 }
 
-body{
-    height: 100vh;
-    width: 100vw;
-    background-image: linear-gradient(to bottom right,#ad3ffb,#4400c9 );
-    background-attachment: fixed;
-    overflow: hidden;
+form {
+    max-width: 700px;
+    margin: auto;
+
+    padding-top: 150px;
+    padding-bottom: 50px;
 }
-body  main{
-    background-color: transparent;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    padding: 50px 8px;
-    padding-top: 0px;
-}
-main form{
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
-    border-radius: 8px;
-    display: grid;
-    grid-template-columns: 1fr;
-    color: #58585b;
-    width: 100%;
-    max-height: 80%;
-    gap: 10px;
-    overflow-y:scroll;
-    background-color: #ffffff;
-    margin-bottom: 50px;
-    box-sizing: border-box;
-    padding-left: 10px;
-    padding-right: 10px;
+form .back{
+    backdrop-filter: blur(10px);
+    padding: 16px;
+    box-shadow: 5px 10px 30px rgba(0,0,0,0.3);
+    border-radius: 25px;
 }
 
-main .cont h1{
-    font-size: 45px;
-    font-weight: bold;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-form input:not([type="submit"]),textarea{
+form input:not([type="submit"]),
+textarea {
     height: 40px;
     width: 100%;
     border: none;
-    border-bottom: 2px solid #888;
+    border-bottom: 2px solid #000;
     outline: none;
     margin-top: 20px;
     font-size: 18px;
     transition: 0.4s;
+    background-color: transparent;
+    color: #000;
 }
-form textarea{
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+    -webkit-text-fill-color:green
+}
+
+::placeholder{
+    color: #000;
+}
+
+form textarea {
     height: 200px;
     grid-column-start: 1;
     grid-column-end: 2;
     resize: none;
 }
-form div{
-    text-align: center;
-}
-.fulltext{
-    grid-column-start: 1;
-    grid-column-end: 2;
-}
-form input:focus,form textarea:focus{
-    border-bottom: 2px solid #4400c9;
-}
 
-.submit{
-    
-    grid-column-start: 1;
-    grid-column-end: 2;
-    transition: ease 0.3s;
-}
-
-.submit:hover{
-    transform: scale(1.1);
-}
-form input[type="submit"]{
+form input[type="submit"] {
     border: none;
     background-color: #4400c9;
-    color:#ffffff;
-    border-radius:8px ;
+    color: #ffffff;
+    border-radius: 8px;
     margin-top: 30px;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 8px 24px;
-}
-
-@media only screen and (max-width: 400px) {
-    main .cont{
-        grid-template-columns: 1fr;
-    }
-    .fulltext,form textarea,.submit,main .cont h1{
-        grid-column-start: 1;
-        grid-column-end: 2;
-    }
-
-}
-@media only screen and (min-width: 400px) {
-    main .cont{
-        grid-template-columns: 1fr 1fr;
-    }
-    .fulltext,form textarea,.submit,main .cont h1{
-        grid-column-start: 1;
-        grid-column-end: 3;
-    }
-
-}
-
-@media only screen and (min-width: 600px) {
-    main .cont{
-        grid-template-columns: 1fr 1fr;
-    }
-    .fulltext,form textarea,.submit,main .cont h1{
-        grid-column-start: 1;
-        grid-column-end: 3;
-    }
-
-}
-
-@media only screen and (min-width: 768px) {
-    main .cont{
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    .fulltext,form textarea,.submit,main .cont h1{
-        grid-column-start: 1;
-        grid-column-end: 4;
-    }
-}
-
-@media only screen and (min-width: 992px) {
-    main .cont{
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-    form textarea,.submit,main .cont h1{
-        grid-column-start: 1;
-        grid-column-end: 5;
-    }
-    .fulltext{
-        grid-column-start: 3;
-        grid-column-end: 5;
-    }
-
-
 }
